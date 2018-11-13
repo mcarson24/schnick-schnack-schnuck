@@ -9,7 +9,6 @@
 
 body {
 	background-color: #292C34;
-	/*min-height: 100vh;*/
 }
 
 h1 {
@@ -48,7 +47,7 @@ main {
 	font-size: 14px;
 	padding: 2px 10px;
 	position: absolute;
-	top: 15px;
+	top: 25px;
 }
 
 .badge#user {
@@ -73,7 +72,7 @@ main {
 	margin: 50px;
 }
 
-.choice img {
+img {
 	height: 125px;
 	width: 125px;
 }
@@ -96,4 +95,25 @@ main {
 	color: #FFF;
 	font-weight: bold;
 	font-size: 1.25rem;
+}
+
+.playground {
+	margin: 35px;
+	display: flex;
+	justify-content: center;
+}
+
+.playground img {
+	margin: 0 45px;
+}
+
+.playground .user img {
+	transform: rotate(90deg);
+}
+
+.playground .computer img {
+	-moz-transform: rotate(270deg) scaleX(-1);
+    -o-transform: rotate(270deg) scaleX(-1);
+    -webkit-transform: rotate(270deg) scaleX(-1);
+    transform: rotate(270deg) scaleX(-1);
 }
