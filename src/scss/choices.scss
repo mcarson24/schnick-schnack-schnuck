@@ -1,0 +1,24 @@
+.choices {
+	display: flex;
+	justify-content: center;
+	margin: 50px;
+}
+
+.choice {
+	border-radius: 50%;
+	border: 2px solid #FFF;
+	cursor: pointer;
+	margin: 0 20px;
+	padding: 10px;
+	transition: background-color .5s ease;
+	
+	img {
+		height: 50px;
+		width: 50px;	
+	}
+	
+	&:hover {
+		background-color: #1C1E24;
+	}
+}
+

@@ -1,0 +1,51 @@
+.playground {
+	border-bottom: 3px solid #404552;
+	display: flex;
+	justify-content: center;
+	margin: 35px auto;
+	width: 50%;
+
+	img {
+		margin: 25px 45px 45px;
+	}
+
+	h2 {
+		color: #FFF;
+		text-align: center;
+	}
+
+	participant {
+		display: flex;
+		flex-direction: column;
+	}
+}
+
+#user {
+	img {
+		transform: rotate(90deg);
+
+		&#userChoice.paper,
+		&#userChoice.scissors {
+			-moz-transform: rotate(-90deg) scaleY(-1);
+		    -webkit-transform: rotate(-90deg) scaleY(-1);
+		    transform: rotate(-90deg) scaleY(-1);
+    		-o-transform: rotate(-90deg) scaleY(-1);
+		}
+	}
+}
+
+#computer {
+	img {
+		-moz-transform: rotate(270deg) scaleX(-1);
+	    -o-transform: rotate(270deg) scaleX(-1);
+	    -webkit-transform: rotate(270deg) scaleX(-1);
+	    transform: rotate(270deg) scaleX(-1);
+
+	    &#computerChoice.paper,
+	    &#computerChoice.scissors {
+			transform: rotate(-90deg);
+	    }
+	}
+}
+
+
