@@ -41,17 +41,17 @@
 	export default {
 		data() {
 			return {
-				userScore: 0,
+				computerChoice: '',
 				computerScore: 0,
 				message: "Let's play Rock Paper Scissors!",
 				userChoice: 'rock',
-				computerChoice: '',
+				userScore: 0,
 				winner: 'none'
 			}
 		},
 		methods: {
-			game(choice) {
-				this.userChoice = choice;
+			game(userChoice) {
+				this.userChoice = userChoice;
 				this.computerChoice = this.getComputerChoice();
 
 			 	if (this.userChoice.localeCompare(this.computerChoice) === 0) return this.draw();
@@ -91,6 +91,7 @@
 				return validChoices[randomInteger];
 			},
 			resetScores() {
+				this.message = "Okay let's start over.";
 				this.computerScore = 0;
 				this.userScore = 0;
 			},
