@@ -96,12 +96,12 @@
 			},
 			win(outcome) {
 				this.message = `${outcome}. You win!`;
-				this.computerScore++;
+				this.userScore++;
 				this.winner = 'user';
 			},
 			loss(outcome) {
 				this.message = `${outcome}. I win!`;
-				this.userScore++;
+				this.computerScore++;
 				this.winner = 'computer';
 			},
 			draw() {
