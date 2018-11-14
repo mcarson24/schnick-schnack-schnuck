@@ -41,6 +41,14 @@ main {
 	position: relative;
 }
 
+.scoreboard.win {
+	border-color: #35C446;
+}
+
+.scoreboard.loss {
+	border-color: #E2584D;
+}
+
 .badge {
 	background-color: #E2584D;
 	border-radius: 5px;
@@ -48,6 +56,11 @@ main {
 	padding: 2px 10px;
 	position: absolute;
 	top: 25px;
+}
+
+.badge#user.win, 
+.badge#computer.loss {
+	background-color: #35C446;	
 }
 
 .badge#user {
@@ -58,11 +71,10 @@ main {
 	right: -30px;
 }
 
-.result {
-	color: #FFF;
-}
-
 .result h1 {
+	color: #FFF;
+	font-size: 2.5rem;
+	margin-top: 25px;
 	text-align: center;
 }
 
@@ -79,11 +91,16 @@ img {
 
 .choice {
 	border-radius: 50%;
-	border: 4px solid #FFF;
+	border: 2px solid #FFF;
 	cursor: pointer;
 	margin: 0 20px;
 	padding: 10px;
 	transition: background-color .5s ease;
+}
+
+.choice img {
+	height: 50px;
+	width: 50px;	
 }
 
 .choice:hover {
@@ -98,22 +115,62 @@ img {
 }
 
 .playground {
-	margin: 35px;
+	margin: 35px auto;
 	display: flex;
 	justify-content: center;
+	width: 50%;
+	border-bottom: 3px solid #404552;
 }
 
 .playground img {
-	margin: 0 45px;
+	margin: 25px 45px 45px;
 }
 
-.playground .user img {
+.playground .participant {
+	display: flex;
+	flex-direction: column;
+}
+
+.playground h2 {
+	text-align: center;
+	color: #FFF;
+}
+
+.playground #user img {
 	transform: rotate(90deg);
 }
 
-.playground .computer img {
+.playground #computer img {
 	-moz-transform: rotate(270deg) scaleX(-1);
     -o-transform: rotate(270deg) scaleX(-1);
     -webkit-transform: rotate(270deg) scaleX(-1);
     transform: rotate(270deg) scaleX(-1);
+}
+
+.buttons {
+	display: flex;
+	justify-content: center;
+}
+
+.reset {
+	background-color: #404552;
+	padding: 10px 25px;
+	border: none;
+	border-radius: 5px;
+	color: #FFF;
+	font-size: 2rem;
+	cursor: pointer;
+}
+ 
+#computer img#computerChoice.paper,
+#computer img#computerChoice.scissors {
+	transform: rotate(-90deg);
+}
+
+#user img#userChoice.paper,
+#user img#userChoice.scissors {
+	-moz-transform: rotate(-90deg) scaleY(-1);
+    -o-transform: rotate(-90deg) scaleY(-1);
+    -webkit-transform: rotate(-90deg) scaleY(-1);
+    transform: rotate(-90deg) scaleY(-1);
 }
