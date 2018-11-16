@@ -12,11 +12,11 @@
 		<div class="playground">
 			<div class="participant" id="user">
 				<h2>Your Choice</h2>
-				<img :src="userChoiceImage" id="userChoice" :class="userChoice" alt="">
+				<img :src="userChoiceImage" id="userChoice" :class="[userChoice, resultClass]" alt="">
 			</div>
 			<div class="participant" id="computer">
 				<h2>My Choice</h2>
-				<img :src="computerChoiceImage" id="computerChoice" :class="computerChoice" alt="">
+				<img :src="computerChoiceImage" id="computerChoice" :class="[computerChoice, resultClass]" alt="">
 			</div>
 		</div>
 		<p class="message">Make your choice</p>

@@ -31,6 +31,10 @@
 		    transform: rotate(-90deg) scaleY(-1);
     		-o-transform: rotate(-90deg) scaleY(-1);
 		}
+		&.win {
+			position: relative;
+			animation: shake .5s linear 0s 1 alternate;
+		}
 	}
 }
 
@@ -45,6 +49,10 @@
 	    &#computerChoice.scissors {
 			transform: rotate(-90deg);
 	    }
+	    &.loss {
+			position: relative;
+			animation: shake .5s linear 0s 1 alternate;
+		}
 	}
 }
 

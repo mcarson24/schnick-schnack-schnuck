@@ -24,6 +24,20 @@ img {
   height: 125px;
   width: 125px; }
 
+@keyframes shake {
+  25% {
+    top: -5px;
+    left: 5px; }
+  50% {
+    top: 0;
+    left: 0; }
+  75% {
+    top: -5px;
+    left: 5px; }
+  100% {
+    top: 0;
+    left: 0; } }
+
 .playground {
   border-bottom: 3px solid #404552;
   display: flex;
@@ -46,6 +60,9 @@ img {
     -webkit-transform: rotate(-90deg) scaleY(-1);
     transform: rotate(-90deg) scaleY(-1);
     -o-transform: rotate(-90deg) scaleY(-1); }
+  #user img.win {
+    position: relative;
+    animation: shake .5s linear 0s 1 alternate; }
 
 #computer img {
   -moz-transform: rotate(270deg) scaleX(-1);
@@ -54,6 +71,9 @@ img {
   transform: rotate(270deg) scaleX(-1); }
   #computer img#computerChoice.paper, #computer img#computerChoice.scissors {
     transform: rotate(-90deg); }
+  #computer img.loss {
+    position: relative;
+    animation: shake .5s linear 0s 1 alternate; }
 
 .scoreboard {
   border-radius: 5px;
@@ -65,9 +85,9 @@ img {
   position: relative;
   text-align: center;
   width: 15%; }
-  .scoreboard .win {
+  .scoreboard.win {
     border-color: #35C446; }
-  .scoreboard .loss {
+  .scoreboard.loss {
     border-color: #E2584D; }
 
 .badge {

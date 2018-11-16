@@ -9,11 +9,11 @@
 	text-align: center;
 	width: 15%;
 	
-	.win {
+	&.win {
 		border-color: #35C446;
 	}
 	
-	.loss {
+	&.loss {
 		border-color: #E2584D;
 	}
 }
