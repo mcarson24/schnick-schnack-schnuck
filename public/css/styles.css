@@ -129,6 +129,13 @@ img {
   font-size: 2rem;
   padding: 10px 25px; }
 
+.reset:hover {
+  background-color: #4C5261; }
+
+.reset:active {
+  box-shadow: inset 1px 1px 5px #404552;
+  outline: none; }
+
 .choices {
   display: flex;
   justify-content: center;
@@ -146,4 +153,8 @@ img {
     width: 50px; }
   .choice:hover {
     background-color: #1C1E24; }
+
+.choice:active {
+  box-shadow: inset 1px 1px 5px #404552;
+  outline: none; }
 
