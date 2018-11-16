@@ -12,11 +12,11 @@
 		<div class="playground">
 			<div class="participant" id="user">
 				<h2>Your Choice</h2>
-				<img :src="userChoiceImage" id="userChoice" :class="[userChoice, resultClass]" alt="">
+				<img :src="userChoiceImage" id="userChoice" :class="[userChoice, resultClass]" alt="Image of a hand playing rock, paper, scissors">
 			</div>
 			<div class="participant" id="computer">
 				<h2>My Choice</h2>
-				<img :src="computerChoiceImage" id="computerChoice" :class="[computerChoice, resultClass]" alt="">
+				<img :src="computerChoiceImage" id="computerChoice" :class="[computerChoice, resultClass]" alt="Image of a hand playing rock, paper, scissors">
 			</div>
 		</div>
 		<p class="message">Make your choice</p>
@@ -118,6 +118,7 @@
 				return `images/${this.userChoice}.png`;
 			},
 			resultClass() {
+				if (this.userScore == 0 && this.computerScore == 0) return '';
 				if (this.winner == 'user') return 'win';
 				if (this.winner == 'computer') return 'loss';
 			}
