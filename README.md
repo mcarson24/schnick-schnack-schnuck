@@ -1,4 +1,4 @@
-##My version of the 'Rock Paper Scissors' project from FreeCodeCamp.
+## My version of the 'Rock Paper Scissors' project from FreeCodeCamp.
 
 In case I forget, after cloning the repo:
 
